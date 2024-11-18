@@ -1,0 +1,261 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>AstroHopper - Web Application for Sky Navigation Manual</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1 id="astrohopper-fka-skyhopper">AstroHopper - (f.k.a. SkyHopper)</h1>
+<div class="toc">
+<ul>
+<li><a href="#astrohopper-fka-skyhopper">AstroHopper - (f.k.a. SkyHopper)</a><ul>
+<li><a href="#operation">Operation</a></li>
+<li><a href="#notes-for-ios-users">Notes for iOS Users</a></li>
+<li><a href="#installing-astrohopper">Installing AstroHopper</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#controls">Controls</a></li>
+<li><a href="#controls-in-small-screen-mode">Controls in Small Screen Mode</a></li>
+<li><a href="#wikipedia-page-info">Wikipedia Page Info</a></li>
+<li><a href="#watch-list">Watch List</a></li>
+<li><a href="#user-objects">User Objects</a></li>
+<li><a href="#equatorial-mount-users">Equatorial Mount Users</a></li>
+<li><a href="#road-map">Road Map</a></li>
+<li><a href="#known-issues">Known Issues</a></li>
+<li><a href="#reporting-bugs-and-getting-support">Reporting Bugs and Getting Support</a></li>
+<li><a href="#copyrights">Copyrights</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><a href="https://m-anish.github.io/astrohopper.html">AstroHopper</a> (formerly known as SkyHopper) is a free and open-source
+web application developed by <a href="https://github.com/artyom-beilis/skyhopper">Artyom Beilis</a> that helps to find objects across the night sky.
+It does this by allowing an accurate hop from a well-known and easily identifiable 
+star to other fainter stars or DSO by measuring changes in pointing angles of the cell phone
+using built in gyroscope and gravity sensors. It is similar to Digital Setting Circles 
+implemented in a smart phone.</p>
+<p>The smart phone must have gyro and gravity sensors and preferably compass.</p>
+<p>AstroHopper is a web-based application that contains a single HTML page with a JavaScript objects 
+database that will continue working even offline as long as it is cached by the browser.</p>
+<h2 id="operation">Operation</h2>
+<p>You attach the cellphone to the telescope such that the physical <strong>top</strong> part of the phone 
+points towards viewing direction. Note this is different from typical sky observing apps
+that simulate camera view of the sky. For AstroHopper the screen is parallel to the
+viewing direction.</p>
+<p>Before you attach the smartphone, open AstroHopper application and calibrate the compass using "8" like movements.
+The calibration will significantly improve compass direction accuracy.
+But if your compass fails to work properly, press the hand button <code>✋</code> to use Manual Mode.</p>
+<p>When AstroHopper starts, a Quick Start Guide appears.  You can also get help by pressing the gear <code>⚙</code> button at upper right and then the <code>?</code> button. </p>
+<ol>
+<li>Align your telescope with an easily identifiable star or a planet near the object you want to observe</li>
+<li>Tap on <code>[Align]</code> button at top left of screen </li>
+<li>Tap on the star or the planet you selected. A 3 sec timer is started to make sure there is no shaking. After 3 seconds the application is aligned on the selected object. "Aligned" message is shown and a cross appears in the center of the screen showing the viewing direction your telescope on the map.</li>
+<li>Tap on an object you want to observe or type its name in the search box in the Settings Menu (accessed via the gear <code>⚙</code> button). You will see a line showing the direction you need to move the telescope and the changes in altitude and azimuth are shown at the right and bottom part of the screen</li>
+<li>Move the telescope till these numbers are close to zero - at this point your telescope should point to the requested object</li>
+<li>In order to move to next object - repeat the alignment process from the step 1 since the built-in cellphone gyros don't keep the accuracy for a long time or multiple movements</li>
+</ol>
+<p>Tutorial and Introduction Videos:</p>
+<ul>
+<li>Here you can find a demonstration and tutorial video created by Nir Zonshine: <a href="https://youtu.be/AtArqBLWWJ8">https://youtu.be/AtArqBLWWJ8</a></li>
+<li>Another very good review created by John Dreese (a.k.a. Reflactor) can be found here: <a href="https://youtu.be/6-_58mSGz1Q">https://youtu.be/6-_58mSGz1Q</a></li>
+</ul>
+<h2 id="notes-for-ios-users">Notes for iOS Users</h2>
+<p>You need to provide some permissions to Safari in order to run AstroHopper.</p>
+<p>Device Orientation Sensors:</p>
+<ul>
+<li>For iOS 13.0 and above you need to allow access to device orientation information by pressing <code>Enable Device Orientation</code> button once application loads</li>
+<li>For iOS 12.2 and before 13 you need to allow access via: <em>Settings &gt; Safari &gt; Motion and Orientation access</em></li>
+</ul>
+<p>Geolocation (watch for No Geolocation message on screen):</p>
+<ul>
+<li>
+<p>Settings &gt; Privacy &gt; Location Services ON. Then scroll down to "Safari Web..." and check "While Using the app". For iOS 14.0 and above both precise and approximate location should work.</p>
+<p>Some users reported need for reboot of the device for these changes to take an effect.</p>
+</li>
+</ul>
+<h2 id="installing-astrohopper">Installing AstroHopper</h2>
+<p>AstroHopper is a Progressive Web Application. It can be installed as regular application on your smart phone. Once it is installed it is fully accessible offline. You can also run AstroHopper as a demo on a laptop computer.</p>
+<p>In order to install the application, open the URL <a href="https://artyom-beilis.github.io/astrohopper.html">https://artyom-beilis.github.io/astrohopper.html</a> and install it.</p>
+<ul>
+<li>Android/Chrome - tap on "..." near the URL, and select "Install App" or "Add to Home Screen" </li>
+<li>Samsung Browser - tap on <code>↓</code> symbol near URL</li>
+<li>Android/Firefox - tap on "..." near the URL, and select "Install"</li>
+<li>Android/Edge - tap on "..." at the bottom and select "Add to Phone"</li>
+<li>iPhone/Safari - tap the "Share" button (a square with an arrow pointing up) scroll down and select "Add to Home Screen"</li>
+</ul>
+<p>The application will be installed on home screen or in applications screen - depending on browser.</p>
+<p>To test if AstroHopper works offline:</p>
+<ol>
+<li>Close all applications/browsers</li>
+<li>Put your phone in "Flight/Airplane" mode, make sure WiFi is closed</li>
+<li>Tap on application icon and make sure it works.</li>
+</ol>
+<p>You can usually update the installed version of AstroHopper by refreshing the page. If this does not work for your browser, uninstall it and reinstall from scratch.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>
+<p><em>The sky in application looks different from what I expect?</em></p>
+<p>Make sure your browser provides correct location information. If not "No Geolocation" message will be shown. Check the geographical coordinates in settings menu to make sure they match your location</p>
+</li>
+<li>
+<p><em>I move the phone but nothing moves?</em></p>
+<p>Make sure your cellphone has working sensors. Do SkyMap like applications work for you?</p>
+</li>
+<li>
+<p><em>I move the telescope but only Altitude is changing. Azimuth is pointing to Polaris/North?</em></p>
+<p>Your browser may not support compass heading (for example Firefox) or you don't have such a sensor in the phone. A compass with a line crossing it will be shown.
+You can adjust azimuth manually by swiping the screen till you get required azimuth and then align.</p>
+</li>
+<li>
+<p><em>I pointed my telescope to a star but the cell phone seems to point to a different direction?</em></p>
+<p>The compass of the cell phone may be significantly misaligned you may to do following:</p>
+<ol>
+<li>Move your cell phone in compass calibration/waving pattern to increase compass accuracy</li>
+<li>Increase application's field of view by pressing <code>+</code> at the top left corner near value <code>∠60°</code> - default FOV.</li>
+<li>You may switch to manual azimuth mode by pressing "hand" <code>✋</code> icon at the right side and adjust the azimuth manually</li>
+</ol>
+</li>
+<li>
+<p><em>The screen becomes dim very fast and I don't have time to align/point the telescope?</em></p>
+<p>Modify the "sleep" settings for the cell phone. It is under "Settings -&gt; Display" in Android and "Settings -&gt; Display and Brightness -&gt; Auto-Lock” in IOS</p>
+</li>
+<li>
+<p><em>I start moving the telescope to modify azimuth direction but according to the application it stopped moving, or going back - behaves strangely?</em></p>
+<p>It seems that gyro lost accuracy. It happens. Try again. If it still happens all the time and you can't reach the target. Try one of following:</p>
+<ol>
+<li>Select an alignment point that is closer on its azimuth to target object - altitude has much more accurate tracking.</li>
+<li>Correct altitude first and then search for the object on azimuth axis </li>
+</ol>
+</li>
+<li>
+<p><em>Pinch gesture zooms the entire web page instead of changing the field of view of the sky map</em></p>
+<p>It related to configuration:</p>
+<ul>
+<li>Chrome: settings -&gt;accessibility -&gt; enable force zoom -&gt; off</li>
+<li>Firefox:settings -&gt; accessibility -&gt; always enable zoom -&gt; off</li>
+<li>Samsung Browser: settings -&gt;appearance -&gt; manual zoom -&gt; off</li>
+<li>Edge: settings -&gt; font size -&gt; zoom on all sites -&gt; off or settings -&gt; Accessibility -&gt; zoom on all websites -&gt; off</li>
+</ul>
+<p>Unfortunately, there is no option to disable full web page zoom on iOS.</p>
+</li>
+</ul>
+<h2 id="controls">Controls</h2>
+<ul>
+<li>
+<p>Left side, from top to bottom:</p>
+<ul>
+<li>Align button and status - pressing on it starts alignment process - you need to select a star or planet you aligning on to.</li>
+<li>Field of view - modify with <code>+</code>, <code>-</code> to adjust </li>
+<li>If watch list is selected <code>&lt;</code>,<code>&gt;</code> controls for browsing watch list object. Selected object name is shown below</li>
+</ul>
+</li>
+<li>
+<p>Right side, from top to bottom, right to left</p>
+<ul>
+<li><code>⚙</code> - settings button</li>
+<li>Object search box, allows to enter object name or code. Once found press Enter on keyboard. Note if you want to do same search once again, press on the "Magnifing Glass" and it would return to the selected object.</li>
+<li><code>✋</code> - switch to manual mode, "<em>compass</em>" switch to compass mode, "<em>compass crossed</em>" - no compass available use manual mode only</li>
+<li><code>W</code> - appears when a named object selected - pressing on it opens Wikipedia page about the object, requires network.</li>
+</ul>
+</li>
+<li>
+<p>Settings Menu (accessed from gear <code>⚙</code> icon):</p>
+<ul>
+<li><code>↻</code> button - reset alignment and target</li>
+<li>Small UI Mode - optimize for small screen: make buttons smaller, move field of view controls to settings menu</li>
+<li>Full Screen - switch application to full screen</li>
+<li>Night Mode - enable or disable red-night mode screen</li>
+<li>In "Small Screen Mode" only: Field of view - modify with <code>+</code>, <code>-</code> to adjust </li>
+<li>Maximum star magnitude to display/align on - adjust with <code>+</code>, <code>-</code> controls</li>
+<li>Maximum apparent magnitude of DSO objects to be displayed - modify with <code>+</code>, <code>-</code> controls</li>
+<li>Font size increase option to allow bigger fonts if needed</li>
+<li>Watch List selection and editing </li>
+<li>Search target by name field</li>
+<li>Allow alignment using any DSO object. Use with care since it is hard to define a center of big DSO object like open cluster.</li>
+<li>Filtering of the Astronomical objects by type</li>
+<li>Enable/Disable pinch zoom</li>
+<li>Wiki information configuration</li>
+<li>Show quick-start tutorial on startup </li>
+<li>User Added Objects List</li>
+<li>Status of geolocation and reload geolocation button</li>
+<li>Sensors information</li>
+</ul>
+</li>
+</ul>
+<h2 id="controls-in-small-screen-mode">Controls in Small Screen Mode</h2>
+<p>On screen controls:</p>
+<ul>
+<li>Left Top: <code>◎</code> - Align button with status: <code>✓</code> - aligned, <code>✗</code> - not aligned, <code>?</code> - select alignment star</li>
+<li>If watch list is selected, on the left <code>&lt;</code>,<code>&gt;</code> controls for browsing watch list object. Selected object name is shown below</li>
+<li>
+<p>Right:</p>
+<ul>
+<li>Manual <code>✋</code> or "<em>compass</em>" mode</li>
+<li>Settings Menu: <code>⚙</code></li>
+</ul>
+</li>
+<li>
+<p>Left <code>W</code> - appears when a named object selected - pressing on it opens Wikipedia page about the object, requires network</p>
+</li>
+</ul>
+<h2 id="wikipedia-page-info">Wikipedia Page Info</h2>
+<p>When <code>W</code> button appears you can tap on it and open a frame with Wikipedia page about the selected object.</p>
+<p><em>Note:</em> But be careful - the app has no control over style of the page and by default it would be black text over white page. It is something not desirable for night vision. To improve this, you can tweak your browser settings or use a specific browser extension such as <a href="https://darkreader.org">Dark Reader</a>, however white text or bright images may still disturb your night vision.</p>
+<p>Thus by default the Wiki page info support is disabled in Night mode. You can change behavior in settings menu "Wiki".</p>
+<h2 id="watch-list">Watch List</h2>
+<p>A user can create a custom watch list in advance to browse them easily during the night.
+There is <code>List</code> option in "Settings" menu.  It has  <code>[edit]</code> control to open watch list editing tool.</p>
+<p>A watch list is defined by a simple list of object names separated by space, new lines or commas. 
+For example below the "default" list:</p>
+<pre><code>M411, M47, M49, M50, M44, M45
+</code></pre>
+<p>Several named lists can be defined by giving watch list a name followed by <code>:</code>, for example:</p>
+<pre><code>clusters: M41 M47 M49
+ M50 M44 M45
+doublestars: Polaris, "Cor Caroli"
+</code></pre>
+<p>It is possible to add user comment between <code>(</code> and <code>)</code> to explain the object id. It would be shown in UI upon object selection, for example:</p>
+<pre><code>Galaxies: M31 (Andromeda), M64 (Black Eye)
+</code></pre>
+<p><em>Note:</em> if you adding a comment or use a name that contains spaces you need to add a comma <code>,</code> as a separator</p>
+<p>Lists can be selected by pressing <code>&lt;</code> and <code>&gt;</code> buttons in "Lists" control. When the list is selected two buttons <code>&lt;</code> and <code>&gt;</code> are shown in main screen under "Align" button. They allow browsing the objects forward and backward. The current selected object's name is shown under the controls.</p>
+<p>The watch lists are stored at your phone on per domain basis. They are kept even when you reopen the app. </p>
+<p><em>Note:</em> if you accessing the app from different location (for example from local server) than it is stored separately, so prepare the list in advance.</p>
+<h2 id="user-objects">User Objects</h2>
+<p>This application does not contain every possible star or DSO. If you want to access objects that are not listed in the database you can add them via "User Objects" in settings menu.</p>
+<p>User object are defined in CSV format when first column contains object name, second right ascension (RA) and the third the declination (DEC).
+Both RA and DEC can be given as decimal degrees (0-360 for RA and -90 +90 for DEC) or in hour/degree with minutes and seconds. Seconds may be omitted. Fields can be separated by spaces, by ":" or by appropriate symbols like "h", "m", "s", "d". For example </p>
+<ul>
+<li>RA: <code>170.6358</code> or <code>11:22:32.6</code> or <code>11h 22m 32.6s</code> or <code>11h 22' 32.6''</code> or <code>11 22′ 32.6″</code> or  <code>11 22 32.6</code>, <code>11:32</code></li>
+<li>DEC: <code>-87.3757</code> or <code>-87:22:32.6</code> or <code>-87d 22m 32.6s</code> or <code>-87d 22' 32.6''</code> or <code>-87° 22′ 32.6″</code> or <code>-87 22 32.6</code>, <code>-87:22</code></li>
+</ul>
+<p>This is an example of such a list:</p>
+<pre><code>V1405,23h 24m 48s, +61° 11′ 15″
+Pluto,19:55:16,-22:13:42
+</code></pre>
+<p>The user objects are stored on your phone on per domain basis. They are kept even when you reopen the app. </p>
+<p><em>Note:</em> if you are accessing the app from different location (for example from local server) than it is stored separately, so prepare the list in advance.</p>
+<h2 id="equatorial-mount-users">Equatorial Mount Users</h2>
+<p>The application assumes you work with alt-azimuth mount. If you are using equatorial mount an additional error may be introduced due to misalignment between the cell phone major axis and the telescope axis.</p>
+<p>If the targets are close to poles and significant changes in right ascension are required for the hop any misalignment error between cell phone axis and telescope axis will affect the accuracy. Final error can be calculated as 2e⋅sin(Δα/2)⋅sin(δ), where e - misalignment error between cell phone and telescope, Δα - change in right ascension required for the hop and δ - declination of the target.</p>
+<p>So it may not work reliably for equatorial mounts. Alt-Az mounts are recommended.</p>
+<h2 id="road-map">Road Map</h2>
+<ol>
+<li>Develop procedure for phone alignment for equatorial mounts.</li>
+<li>Implement zoom-via-pinch.</li>
+</ol>
+<h2 id="known-issues">Known Issues</h2>
+<ul>
+<li>Pinch zoom does not work properly on iOS - no way to disable browser zoom</li>
+<li>Pinch zoom or double tap on iOS devices zooms the screen when not supposed to</li>
+<li>On some iPad versions (iOS 12.5) the star/target selection does not work</li>
+</ul>
+<h2 id="reporting-bugs-and-getting-support">Reporting Bugs and Getting Support</h2>
+<ul>
+<li>Best way to report bugs is on github project: <a href="https://github.com/artyom-beilis/skyhopper">https://github.com/artyom-beilis/skyhopper</a></li>
+<li>Also the author of the program (Artyom Beilis) is frequent visitor of <a href="https://www.cloudynights.com/index/">Cloudy Nights</a> forum so you can get help there. Make mention the application name correctly "AstroHopper".</li>
+</ul>
+<h2 id="copyrights">Copyrights</h2>
+<p>(C) 2021-2023 Artyom Beilis.</p>
+<p>It is an open source web application licensed under GPL license. It may work only with well working sensors. No warranty of any kind is given. For detailed copyrights
+of different parts of the project refer to <a href="https://github.com/artyom-beilis/skyhopper/blob/main/COPYING.md">https://github.com/artyom-beilis/skyhopper/blob/main/COPYING.md</a></p></body>
+</html>
