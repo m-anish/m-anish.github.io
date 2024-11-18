@@ -2,7 +2,7 @@
 
 [TOC]
 
-[AstroHopper](https://artyom-beilis.github.io/astrohopper.html) (formerly known as SkyHopper) is a free and open-source
+[AstroHopper](https://m-anish.github.io/astrohopper.html) (formerly known as SkyHopper) is a free and open-source
 web application developed by [Artyom Beilis](https://github.com/artyom-beilis/skyhopper) that helps to find objects across the night sky.
 It does this by allowing an accurate hop from a well-known and easily identifiable 
 star to other fainter stars or DSO by measuring changes in pointing angles of the cell phone
